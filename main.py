@@ -7,5 +7,6 @@ if __name__ == '__main__':
 
     req = request.urlopen('https://afan.ml/')
     print(req.status)
-    print(req.read().decode())
+    if req.status == 200:
+        print(req.read().decode())
 
